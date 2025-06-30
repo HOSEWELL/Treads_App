@@ -8,7 +8,12 @@ plugins {
 android {
     namespace = "com.example.my_app"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+
+    // *** CHANGE STARTS HERE ***
+    // The error message indicated that url_launcher_android requires NDK 27.0.12077973.
+    // Override the default flutter.ndkVersion with the required version.
+    ndkVersion = "27.0.12077973"
+    // *** CHANGE ENDS HERE ***
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
